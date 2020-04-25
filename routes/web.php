@@ -13,3 +13,6 @@ Route::get('/tasks', function () {
     return view('task')->with('tasks', $data);
 });
 Route::post('/saveTask', 'TaskController@saveTask');
+Route::get('/markAsCompleted/{id}', 'TaskController@markAsCompleted');
+Route::get('/markAsNotCompleted/{id}', 'TaskController@markAsNotCompleted');
+Route::get('/deleteTask/{id}', 'TaskController@deleteTask');
